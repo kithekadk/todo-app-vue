@@ -1,0 +1,33 @@
+@import '../src/assets/base.css';
+
+#mainContainer{
+  width: 1280px;
+  background-image: url('./assets/bg-desktop-dark.jpg');
+  background-repeat: no-repeat;
+  background-size: 1280px 250px;
+}
+
+#todomain{
+  background-color: hsl(235, 24%, 19%);
+  margin-top: 250px;
+  height: 448px;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+    background-color: hsl(233, 14%, 35%)
+  }
+}
