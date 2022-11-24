@@ -5,12 +5,90 @@
   background-image: url('./assets/bg-desktop-dark.jpg');
   background-repeat: no-repeat;
   background-size: 1280px 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #todomain{
-  background-color: hsl(235, 24%, 19%);
-  margin-top: 250px;
+  background-color: hsl(235, 21%, 11%);
+  top: 250px;
   height: 448px;
+  width: 1280px;
+  position: fixed;
+}
+
+#heading{
+  width:40vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#createtodoInput{
+  background-color: hsl(235, 24%, 19%);
+  /* background-color: white; */
+  color:hsl(233, 14%, 35%);
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 40vw;
+  margin-top: 25px;
+}
+
+#displayTodos{
+  margin-top: 20px;
+  width:40vw;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  border-radius: 5px;
+}
+
+.todo{
+  display: flex;
+  color: white;
+  padding: 15px;
+  border-bottom: solid 1px hsl(233, 14%, 35%);
+}
+#todosAbout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+#filter{
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+}
+#todosAbout a{
+  text-decoration: none;
+  color: hsl(233, 14%, 35%);
+}
+
+#updatetodo{
+  background-color:  hsl(235, 24%, 19%);
+  border:none;
+  color: hsl(233, 14%, 35%);
+}
+
+#updatetodo:focus-visible{
+  outline: none;
+}
+
+#checkbox{
+  transform: scale(1.5);
+  /* border-radius: 50%; */
+  clip-path: circle(46% at 50% 50%);
 }
 @media (hover: hover) {
   a:hover {
