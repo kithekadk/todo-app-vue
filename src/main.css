@@ -1,14 +1,39 @@
 @import '../src/assets/base.css';
 
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 780px) {
+  body {
+    font-size: 19px;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+#light{
+  background-image: url('./assets/bg-desktop-light.jpg');
+} 
+#moon{
+    display:none;
+  }
+
 #mainContainer{
-  width: 1280px;
+  width: 100vw;
   background-image: url('./assets/bg-desktop-dark.jpg');
   background-repeat: no-repeat;
   background-size: 1280px 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-position: top;
+  cursor: pointer;
+}
+.createTodo{
+  margin-top: 150px;
 }
 
 #todomain{
@@ -20,12 +45,15 @@
 }
 
 #heading{
+  position: fixed;
+  top:100px;
   width:40vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
 }
+
 h3{
   font-size: 30px;
   font-weight: bold;
@@ -33,7 +61,6 @@ h3{
 
 #createtodoInput{
   background-color: hsl(235, 24%, 19%);
-  /* background-color: white; */
   color:hsl(233, 14%, 35%);
   padding: 20px;
   border-radius: 5px;
@@ -58,6 +85,144 @@ h3{
   padding: 15px;
   border-bottom: solid 1px hsl(233, 14%, 35%);
 }
+
+.todoinfo{
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+}
+
+#todosAbout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+#filter{
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+  cursor: pointer;
+}
+
+#filterMobile{
+  display:none;
+}
+
+#todosAbout a{
+  text-decoration: none;
+  color: hsl(233, 14%, 35%);
+}
+
+#updateTodo{
+  background-color:  hsl(235, 24%, 19%);
+  border:none;
+  color: hsl(233, 14%, 35%);
+}
+
+#updateTodo:focus-visible{
+  outline: none;
+}
+
+#checkbox{
+  transform: scale(1.5);
+  clip-path: circle(46% at 50% 50%);
+}
+  #app {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(233, 14%, 35%)
+  }
+}
+@media (max-width: 375px) {
+  body {
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  #moon{
+    display:none;
+  }
+
+#mainContainer{
+  width: 100vw;
+  background-image: url('./assets/BG-MOBILE-DARK.JPG');
+  background-repeat: no-repeat;
+  background-size: 375px 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: top;
+  cursor: pointer;
+}
+
+.createTodo{
+  margin-top: 150px;
+}
+
+#todomain{
+  background-color: hsl(235, 21%, 11%);
+  top: 250px;
+  height: 448px;
+  width: 375px;
+  position: fixed;
+}
+
+#heading{
+  position: fixed;
+  top:100px;
+  width:90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#createtodoInput{
+  background-color: hsl(235, 24%, 19%);
+  color:hsl(233, 14%, 35%);
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 90vw;
+  margin-top: 25px;
+}
+
+#displayTodos{
+  margin-top: 20px;
+  width:90vw;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  border-radius: 5px;
+}
+
+.todo{
+  display: flex;
+  color: white;
+  padding: 15px;
+  border-bottom: solid 1px hsl(233, 14%, 35%);
+}
+
+.todoinfo{
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+}
 #todosAbout{
   display: flex;
   justify-content: space-between;
@@ -66,46 +231,171 @@ h3{
   padding: 10px 20px;
 }
 #filter{
-  display: flex;
+  display: none;
   justify-content: space-between;
   gap:10px;
+}
+#filterMobile{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-top: 10px solid hsl(235, 21%, 11%);
 }
 #todosAbout a{
   text-decoration: none;
   color: hsl(233, 14%, 35%);
 }
 
-#updatetodo{
+#updateTodo{
   background-color:  hsl(235, 24%, 19%);
   border:none;
   color: hsl(233, 14%, 35%);
 }
 
-#updatetodo:focus-visible{
+#updateTodo:focus-visible{
   outline: none;
 }
 
 #checkbox{
   transform: scale(1.5);
-  /* border-radius: 50%; */
   clip-path: circle(46% at 50% 50%);
 }
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    justify-content: center;
-  }
-
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
     background-color: hsl(233, 14%, 35%)
   }
 }
+ @media (max-width: 779px ) { 
+  body {
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  #moon{
+    display:none;
+  }
+#mainContainer{
+  width: 100vw;
+  background-image: url('./assets/BG-MOBILE-DARK.JPG');
+  background-repeat: no-repeat;
+  background-size: 779px 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-position: top; */
+  cursor: pointer;
+}
+
+.createTodo{
+  margin-top: 150px;
+}
+
+#todomain{
+  background-color: hsl(235, 21%, 11%);
+  top: 250px;
+  height: 448px;
+  width: 779px;
+  position: fixed;
+}
+
+#heading{
+  position: fixed;
+  top:100px;
+  width:70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#createtodoInput{
+  background-color: hsl(235, 24%, 19%);
+  color:hsl(233, 14%, 35%);
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 90vw;
+  margin-top: 25px;
+}
+
+#displayTodos{
+  margin-top: 20px;
+  width:90vw;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  border-radius: 5px;
+}
+
+.todo{
+  display: flex;
+  color: white;
+  padding: 15px;
+  border-bottom: solid 1px hsl(233, 14%, 35%);
+}
+
+.todoinfo{
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+}
+#todosAbout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+#filter{
+  display: none;
+  justify-content: space-between;
+  gap:10px;
+}
+#filterMobile{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-top: 10px solid hsl(235, 21%, 11%);
+}
+#todosAbout a{
+  text-decoration: none;
+  color: hsl(233, 14%, 35%);
+}
+
+#updateTodo{
+  background-color:  hsl(235, 24%, 19%);
+  border:none;
+  color: hsl(233, 14%, 35%);
+}
+
+#updateTodo:focus-visible{
+  outline: none;
+}
+
+#checkbox{
+  transform: scale(1.5);
+  clip-path: circle(46% at 50% 50%);
+}
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(233, 14%, 35%)
+  }
+} 
