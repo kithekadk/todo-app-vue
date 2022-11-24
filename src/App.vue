@@ -156,8 +156,9 @@ const switchToDarkMode = () => {
           /> </label
         >
           <div class="todoinfo">
-            <div>
-              <input id="updateTodo" type="text" v-model="todo.content" class="textbox"/>
+            <div id="updateTodo">
+              {{todo.content}}
+              <!-- <input id="updateTodo" type="text" v-model="todo.content" class="textbox"/> -->
             </div>
  
           <svg
